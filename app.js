@@ -6,6 +6,13 @@ $(document).ready( function() {
 		var tags = $(this).find("input[name='tags']").val();
 		getUnanswered(tags);
 	});
+
+	$('.inspiration-getter').submit( function(event){
+       console.log('it works');
+       var tags = $(this).find("input[name=answers]")
+    });
+
+
 });
 
 // this function takes the question object returned by StackOverflow 
@@ -87,6 +94,8 @@ var getUnanswered = function(tags) {
 		$('.search-results').append(errorElem);
 	});
 };
+
+
 
 
 
